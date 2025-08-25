@@ -10,7 +10,7 @@ inputs:
 
 outputs:
   - id: header
-    type: text
+    type: raw
     description: Header information of the input NIfTI file
 
 config: []
