@@ -5,12 +5,12 @@ set -e
 
 # config.json から入力・出力を読み込む
 t1=$(jq -r .t1 config.json)
-txt=$(jq -r .txt config.json)
+txt="/output/header.txt"
 
 echo "Input T1: $t1"
-echo "Output dir: $txt"
+echo "Output: $txt"
 
 # Run the processing
-python main.py "$t1" "$txt" /output
+python main.py "$t1" "$txt"
 
 
