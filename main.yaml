@@ -15,5 +15,6 @@ outputs:
 
 config:
   - id: bool_param
+    type: bool
     description: test parameter
 
