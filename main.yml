@@ -13,4 +13,7 @@ outputs:
     type: raw
     description: Header information of the input NIfTI file
 
-config: []
+config:
+  - id: bool_param
+    description: test parameter
+

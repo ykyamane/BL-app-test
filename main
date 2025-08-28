@@ -1,19 +1,16 @@
 #!/bin/bash
 
-#PBS -l nodes=1:ppn=1
-#PBS -l walltime=00:05:00
 
 set -e
 
 # config.json から入力・出力を読み込む
 t1=$(jq -r .t1 config.json)
-header=$(jq -r .header config.json)
+outtxt=$(jq -r .header config.json)
 
 echo "Input T1: $t1"
-echo "Output dir: $header"
+echo "Output dir: $outtxt"
 
-# Pythonスクリプトを実行
-python3 main.py "$t1" "$header/header.txt"
-
+# Run the processing
+python main.py "$t1" "$outtxt" /output
 
 

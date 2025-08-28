@@ -11,6 +11,7 @@ def main(input_file, output_file):
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w') as f:
         f.write(header_str)
+    print(output_file)
 
 if __name__ == "__main__":
     input_file = sys.argv[1]
