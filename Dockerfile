@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install --no-cache-dir nibabel
 
-COPY main.py main main.yml /app/
+COPY main.py main main.yaml /app/
 RUN chmod +x /app/main
 
 CMD ["/app/main"]
