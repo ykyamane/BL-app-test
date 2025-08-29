@@ -12,4 +12,3 @@ outputs:
   - id: header
     type: raw
     description: text output
-
