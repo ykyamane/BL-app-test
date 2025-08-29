@@ -13,3 +13,4 @@ COPY main.py main main.yaml /app/
 RUN chmod +x /app/main
 
 CMD ["/app/main"]
+
