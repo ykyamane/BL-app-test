@@ -10,6 +10,7 @@ txt="/raw/header.txt"
 #t1=$(jq -r .t1 /input/config.json)
 #txt=$(jq -r .header /input/config.json)
 
+
 echo "Input T1: $t1"
 echo "Output: $txt"
 
