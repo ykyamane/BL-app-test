@@ -15,7 +15,7 @@ t1=$(jq -r .t1 config.json)
 
 chmod +x main.py
 
-# Singularity 経由で docker image を実行し、その中で python main.py を実行
+
 
 singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
 
