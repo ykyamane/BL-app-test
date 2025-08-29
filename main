@@ -1,20 +1,23 @@
 #!/bin/bash
 
+#PBS -l nodes=1:ppn=1
+#PBS -l vmem=4gb
+#PBS -l walltime=00:05:00
 
 set -e
 
 # config.json から入力・出力を読み込む
 t1=$(jq -r .t1 config.json)
-txt="/raw/header.txt"
+
 # in local
 #t1=$(jq -r .t1 /input/config.json)
 #txt=$(jq -r .header /input/config.json)
 
+chmod +x main.py
 
-echo "Input T1: $t1"
-echo "Output: $txt"
+# Singularity 経由で docker image を実行し、その中で python main.py を実行
 
-# Run the processing
-python main.py "$t1" "$txt"
+singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
 
+#python3 main.py /input/$t1 /output/raw/result.txt
 
