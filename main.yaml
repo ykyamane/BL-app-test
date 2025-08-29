@@ -8,13 +8,3 @@ inputs:
     type: neuro/anat/t1w
     description: T1-weighted anatomical MRI image (NIfTI format)
 
-outputs:
-  - id: header
-    type: raw
-    description: Header information of the input NIfTI file
-
-config:
-  - id: bool_param
-    type: bool
-    description: test parameter
-
