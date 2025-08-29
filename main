@@ -5,8 +5,10 @@ set -e
 
 # config.json から入力・出力を読み込む
 t1=$(jq -r .t1 config.json)
+txt="./header/header.txt"
+# in local
 #t1=$(jq -r .t1 /input/config.json)
-txt="/output/header/header.txt"
+#txt=$(jq -r .header /input/config.json)
 
 echo "Input T1: $t1"
 echo "Output: $txt"

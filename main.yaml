@@ -8,3 +8,8 @@ inputs:
     type: neuro/anat/t1w
     description: T1-weighted anatomical MRI image (NIfTI format)
 
+outputs:
+  - id: header
+    type: raw
+    description: text output
+
