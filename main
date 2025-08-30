@@ -17,9 +17,9 @@ chmod +x main.py
 
 
 
-#singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
+singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
 
-docker run --rm -v $(pwd):/work -w /work brainlife/fsl:5.0.9 python main.py "$t1" "/work/output/raw/header.txt"
+#docker run --rm -v $(pwd):/work -w /work brainlife/fsl:5.0.9 python main.py "$t1" "/work/output/raw/header.txt"
 
 #python3 main.py /input/$t1 /output/raw/result.txt
 
