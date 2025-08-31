@@ -6,20 +6,13 @@
 
 set -e
 
-# config.json から入力・出力を読み込む
-#t1=$(jq -r .t1 config.json)
-
-# in local
-t1=$(jq -r .t1 ./input/config.json)
-#txt=$(jq -r .header /input/config.json)
+# config.json
+t1=$(jq -r .t1 config.json)
 
 chmod +x main.py
 chmod +x main
 
-
 singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
 
-#docker run --rm -v $(pwd):/work -w /work brainlife/fsl:5.0.9 python main.py "$t1" "/work/output/raw/header.txt"
 
-#python3 main.py /input/$t1 /output/raw/result.txt
 
