@@ -14,7 +14,7 @@ t1=$(jq -r .t1 ./input/config.json)
 #txt=$(jq -r .header /input/config.json)
 
 chmod +x main.py
-
+chmod +x main
 
 
 singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
