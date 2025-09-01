@@ -12,7 +12,9 @@ t1=$(jq -r .t1 config.json)
 chmod +x main.py
 chmod +x main
 
-singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "/output/raw/header.txt"
+mkdir -p raw
+
+singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "raw/header.txt"
 
 
 
