@@ -14,7 +14,7 @@ chmod +x main
 
 mkdir -p raw
 
-singularity exec docker://brainlife/fsl:5.0.9 python main.py "$t1" "raw/header.txt"
+singularity exec docker://brainlife/mne:1.2.1 python main.py "$t1" "raw/header.txt"
 
 
 
